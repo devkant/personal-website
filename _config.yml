@@ -1,4 +1,48 @@
-theme: minima
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site Settings
 title: My Personal Blog
 description: A place to share my thoughts and ideas.
-author: My Name
+url: "https://devkant.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/personal-website" # the subpath of your site, e.g. /blog
+lang: "en-US"
+
+# Theme Settings
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Author
+author:
+  name: "Dev Kant"
+  bio: "Software Engineer passionate about Cloud Native technologies."
+  location: "Bengaluru, India"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/devkant"
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+# Navigation
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
